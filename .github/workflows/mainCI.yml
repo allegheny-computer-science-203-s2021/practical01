@@ -5,31 +5,29 @@ on:
     branches: [ main ]
 
 jobs:
-
   grade:
     runs-on: ubuntu-latest
     steps:
-    - uses: gabrielfalcao/pyenv-action@v6
-      with:
-        default: 3.6.3
+    - run: |
+        echo "/home/runner/.pyenv/bin" >> $GITHUB_PATH
+        echo "/home/runner/.local/bin" >> $GITHUB_PATH
     - uses: actions/checkout@v2
       with:
         fetch-depth: '0'
     - name: Set up grading environment
       run: |
+        curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+        pyenv install 3.6.3
+        echo "eval '$(pyenv init -)'" >> ~/.bashrc
+        eval "$(pyenv virtualenv-init -)" >> ~/.bashrc
+        source ~/.bashrc
         pyenv global 3.6.3
-        export PATH="/home/runner/.local/bin:$PATH"
         pip install --upgrade pip
         pip install pipenv
-        # pip install notebook
-        # pipenv install --dev --three
-        # pipenv run flake8 src
-        # pipenv run black --check src
-        # pipenv run pylint src
     - name: Check practical
       run: |
         gradle grade
       if: always()
       env:
-        PIPENV_VENV_IN_PROJECT: 1
-        PIPENV_IGNORE_VIRTUALENVS: 1
+       PIPENV_VENV_IN_PROJECT: 1
+       PIPENV_IGNORE_VIRTUALENVS: 1

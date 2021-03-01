@@ -19,18 +19,6 @@ termfrequency:
             MatchFileFragment --fragment "for tf in word_freqs" --count 1
             MatchFileFragment --fragment "word_freqs" --count 10
 
-checks:
-        check_compute_tf_monolith.py:
-            ConfirmFileExists
-            CountMultipleLineComments --language Python --count 1
-            CountSingleLineComments --language Python --count 10
-            MatchFileFragment --fragment "TODO" --count 0 --exact
-            MatchFileFragment --fragment "subprocess.run" --count 1
-            MatchFileFragment --fragment "not in decoded_stdout" --count 1
-            MatchFileFragment --fragment "live  -  2" --count 1
-            MatchFileFragment --fragment "mostly  -  2" --count 1
-            MatchFileFragment --fragment "sys.exit(exit_code)" --count 1
-
 # --> check the technical writing
 writing/reflection.md:
     ConfirmFileExists
