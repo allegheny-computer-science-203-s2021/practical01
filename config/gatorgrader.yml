@@ -22,13 +22,13 @@ termfrequency:
 # --> check the technical writing
 writing/reflection.md:
     ConfirmFileExists
-    CountFileWords --count 600
+    CountFileWords --count 500
     CountMarkdownTags --tag "heading" --count 8 --exact
     CountMarkdownTags --tag "code_block" --count 1 --exact
     MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
 
 # --> check the number of commits beyond a threshold
-CountCommits --count 10
+CountCommits --count 5
 
 # NOTE: These checks do run correctly on a local laptop
 

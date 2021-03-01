@@ -28,11 +28,8 @@ course class that uses the Python programming language. The GitHub Actions CI bu
 this repository will fail, as evidenced by a red
 &#x2717; appearing in the commit logs.
 
-This assignment invites a developer to implement, document, and automatically
-test a Python program called `termfrequency/compute_tf_monolith.py`.  
-In addition to fixing the bugs in this program and fully documenting it, you must extend, describe, and fully
-implement automated testing strategy in the
-`checks/check_compute_tf_monolith.py` file.
+This assignment invites a developer to fix, finish implementing and document
+a Python program called `termfrequency/compute_tf_monolith.py`.
 
 When you use the `git commit` command to transfer your source code to your
 GitHub repository, [GitHub Actions CI](https://github.com/features/actions) will initialize a build
@@ -195,7 +192,6 @@ during this assignment.
 - Run the linters and the formatter to check your Python source code: `pipenv run lint --check`
 - Run the program with `pipenv` and `python` and a small input: `pipenv run python termfrequency/compute_tf_monolith.py inputs/input.txt`
 - Run the program with `pipenv` and `python` and a realistic input: `pipenv run python termfrequency/compute_tf_monolith.py inputs/pride-and-prejudice.txt`
-- Run the automated checks for the main program: `pipenv run python checks/check_compute_tf_monolith.py`
 
 To run one of these commands, you must be in the main directory for this
 assignment where the configuration files are located. Then, you can type these
@@ -277,14 +273,6 @@ your submission must pass the following checks that
 [GatorGrader](https://github.com/GatorEducator/gatorgrader) automatically
 assesses:
 
-- The check_compute_tf_monolith.py in checks has at least 10 single-line Python comment(s)
-- The check_compute_tf_monolith.py in checks has at least 1 multiple-line Python comment(s)
-- The check_compute_tf_monolith.py in checks has at least 1 of the `live  -  2` fragment
-- The check_compute_tf_monolith.py in checks has at least 1 of the `mostly  -  2` fragment
-- The check_compute_tf_monolith.py in checks has at least 1 of the `not in decoded_stdout` fragment
-- The check_compute_tf_monolith.py in checks has at least 1 of the `subprocess.run` fragment
-- The check_compute_tf_monolith.py in checks has at least 1 of the `sys.exit(exit_code)` fragment
-- The check_compute_tf_monolith.py in checks has exactly 0 of the `TODO` fragment
 - The compute_tf_monolith.py in termfrequency has at least 10 of the `word_freqs` fragment
 - The compute_tf_monolith.py in termfrequency has at least 12 single-line Python comment(s)
 - The compute_tf_monolith.py in termfrequency has at least 1 multiple-line Python comment(s)
@@ -294,14 +282,13 @@ assesses:
 - The compute_tf_monolith.py in termfrequency has at least 2 of the `open(` fragment
 - The compute_tf_monolith.py in termfrequency has exactly 0 of the `TODO` fragment
 - The compute_tf_monolith.py in termfrequency has exactly 1 of the `print(` fragment
-- The file check_compute_tf_monolith.py exists in the checks directory
 - The file compute_tf_monolith.py exists in the termfrequency directory
 - The file reflection.md exists in the writing directory
-- The reflection.md in writing has at least 600 word(s) in total
+- The reflection.md in writing has at least 500 word(s) in total
 - The reflection.md in writing has exactly 0 of the `Add Your Name Here` fragment
 - The reflection.md in writing has exactly 1 of the `code_block` tag
 - The reflection.md in writing has exactly 8 of the `heading` tag
-- The repository has at least 10 commit(s)
+- The repository has at least 5 commit(s)
 
 If [GatorGrader's](https://github.com/GatorEducator/gatorgrader) automated
 checks pass correctly, the tool will produce the output like the following in
@@ -310,7 +297,7 @@ command `echo $?`).
 
 ```
         ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-        ┃ Passed 25/25 (100%) of checks for cmpsc-203-spring-2021-practical1! ┃
+        ┃ Passed 15/15 (100%) of checks for cmpsc-203-spring-2021-practical1! ┃
         ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
