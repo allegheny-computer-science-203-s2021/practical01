@@ -187,9 +187,10 @@ environment, install and manage development packages, and to run Python
 commands. Here is a sample of the Pipenv commands that you will need to run
 during this assignment.
 
-- Install and upgrade the `pipenv` command: `pip install pipenv --user`
+- Install and upgrade the `pipenv` command: `pip install pipenv --user` or `sudo -H pip install -U pipenv` (note, if you have both Python2 and Python3, you may need to use `pip3` command instead of `pip`)
 - Install the development dependencies: `pipenv` command: `pipenv install --dev`
-- Run the linters and the formatter to check your Python source code: `pipenv run lint --check`
+- Check your Python source code with `pylint`: `pipenv run pylint termfrequency`
+- Check your Python source code with `flake8`: `pipenv run flake8 termfrequency`
 - Run the program with `pipenv` and `python` and a small input: `pipenv run python termfrequency/compute_tf_monolith.py inputs/input.txt`
 - Run the program with `pipenv` and `python` and a realistic input: `pipenv run python termfrequency/compute_tf_monolith.py inputs/pride-and-prejudice.txt`
 
