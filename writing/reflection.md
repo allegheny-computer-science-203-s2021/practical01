@@ -4,6 +4,10 @@
 
 Please provide a fenced code block that gives the output from running the program.
 
+## Using a fenced code block, please display the output, if any, from running program checking tools (`pylint` and `flake8`)
+
+## Explain the purpose of program checking tools, such as `pylint` and `flake8`, give specific examples
+
 ## Describe the challenges associated with automatically testing this Python program
 
 Please provide a one-paragraph response to this question.

@@ -23,8 +23,8 @@ termfrequency:
 writing/reflection.md:
     ConfirmFileExists
     CountFileWords --count 300
-    CountMarkdownTags --tag "heading" --count 5 --exact
-    CountMarkdownTags --tag "code_block" --count 1 --exact
+    CountMarkdownTags --tag "heading" --count 7 --exact
+    CountMarkdownTags --tag "code_block" --count 2
     MatchFileFragment --fragment "Add Your Name Here" --count 0 --exact
 
 # --> check the number of commits beyond a threshold

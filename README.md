@@ -10,14 +10,13 @@
   + [Using Docker](#using-docker)
   + [Using Gradle](#using-gradle)
 * [Using Pyenv and Pipenv](#using-pyenv-and-pipenv)
-* [Expected Output](#expected-output)
 * [Automated Checks with GatorGrader](#automated-checks-with-gatorgrader)
 * [Updates](#updates)
 * [GitHub Actions](#github-actions)
 * [System Requirements](#system-requirements)
 * [Reporting Problems](#reporting-problems)
 * [Receiving Assistance](#receiving-assistance)
-* [Practical Assessment](#project-assessment)
+* [Practical Assessment](#practical-assessment)
 
 ## Introduction
 
@@ -43,7 +42,7 @@ assignment's due date.
 
 ## Objectives
 
-To practice using GitHub to access the files for a practical assignment.  Additionally, to practice using your laptop's operating system and software development programs such as a "terminal window" and a "text editor". You will also continue to practice using Slack to support communication with the technical leaders and the course instructor.  Next, you will learn how to implement and run a Python program,  also discovering how to use the `pipenv` tool and the course's automated grading  tool  to  assess  your  progress  towards  correctly  completing  the  project.   Finally,  you  will explore how to perform automated testing with programs implemented in the monolithic style.
+To practice using GitHub to access the files for a practical assignment.  Additionally, to practice using your laptop's operating system and software development programs such as a "terminal window" and a "text editor". You will also continue to practice using Slack to support communication with the technical leaders and the course instructor.  Next, you will learn how to implement and run a Python program,  also discovering how to use the `pipenv` tool and the course's automated grading  tool  to  assess  your  progress  towards  correctly  completing  the  project. 
 
 ## Learning
 
@@ -64,17 +63,18 @@ the "Exercises in Programming Style" book.
 
 ## Tasks
 
-As you are starting this assignment, you first need to complete these tasks to ensure that your laptop is configured correctly to use GitHub, Docker, Pyenv, and Pipenv:
+As you are starting this assignment, if you have not done so yet, you first need to complete these tasks to ensure that your laptop is configured correctly to use GitHub, Docker, Pyenv, and Pipenv:
 
 - Ensure that you have a GitHub account that is connected to your Allegheny-provided email.
 - Create and upload SSH keys to your GitHub account, enabling secure access to source code.
 - Install, configure, and test the Docker Desktop Community Edition program.
-- Install the Pyenv tool and use it to install a recent version of Python.
-- Install the Pipenv tool and later use it to install a Python application's dependencies.
+- Install the  [Pyenv](https://github.com/pyenv/pyenv) tool and use it to install a recent version of Python.
 
-Now, study the provided Python source code and the technical documentation to understand the type of output that your program should produce.  
-The program counts the occurrences of words (term frequencies) in a file. The sample input is the book "Pride and Prejudice" taken from the Gutenberg Collection. The program reads input words from a file, removes all non-alphanumeric characters, normalizes (down-cases) the words, removes stop words (“the”, “a”, “for” etc), counts the occurrences of all words, and finally prints out the 25 most common words in order.
-At the outset, you should notice that the provided source code does not contain all of the source code from  the "Exercises in Programming Style" [book's program](https://github.com/crista/exercises-in-programming-style/blob/master/04-monolith/tf-04.py).  You will need to add in the appropriate source code and documentation to ensure that the Python program passes all of the checks and produces the correct output.  As you complete this assignment, please make sure that you understand and document all aspects of the provided Python programs! 
+Now, study the provided Python source code and the technical documentation to understand the type of output that your program should produce.  The program counts the occurrences of words (term frequencies) in a file. The sample input is the book "Pride and Prejudice" taken from the Gutenberg Collection. The program reads input words from a file, removes all non-alphanumeric characters, normalizes (down-cases) the words, removes stop words (“the”, “a”, “for” etc), counts the occurrences of all words, and finally prints out the 25 most common words in order. At the outset, you should notice that the provided source code does not contain all of the source code from  the "Exercises in Programming Style" [book's program](https://github.com/crista/exercises-in-programming-style/blob/master/04-monolith/tf-04.py). You will need to add in the appropriate source code and documentation to ensure that the Python program passes all of the checks and produces the correct output.  
+
+Next, you will set up a virtual environment, `Pipenv` and use it to install the needed dependencies, following the steps outlines in the [Using Pyenv and Pipenv](#using-pyenv-and-pipenv). You will then explore two linting tools, [pylint](https://www.pylint.org/) and [flake8](https://flake8.pycqa.org/en/latest/) to check your completed program.
+
+As you complete this assignment, please make sure that you understand and document all aspects of the provided Python programs! 
 
 ## System Commands
 
@@ -197,75 +197,6 @@ during this assignment.
 To run one of these commands, you must be in the main directory for this
 assignment where the configuration files are located. Then, you can type these
 commands in the terminal and study the output.
-
-## Expected Output
-
-Running the program with the small input should produce the following output:
-
-```
-live  -  2
-mostly  -  2
-white  -  1
-tigers  -  1
-india  -  1
-wild  -  1
-lions  -  1
-africa  -  1
-```
-
-Running the program with the realistic input should produce the following output:
-
-```
-mr  -  786
-elizabeth  -  635
-very  -  488
-darcy  -  418
-such  -  395
-mrs  -  343
-much  -  329
-more  -  327
-bennet  -  323
-bingley  -  306
-jane  -  295
-miss  -  283
-one  -  275
-know  -  239
-before  -  229
-herself  -  227
-though  -  226
-well  -  224
-never  -  220
-sister  -  218
-soon  -  216
-think  -  211
-now  -  209
-time  -  203
-good  -  201
-```
-
-Running the program that calls the `compute_tf_monolith.py` and checks its
-output should produce the following output:
-
-```
-Tokenized command to execute: ['pipenv', 'run', 'python', 'termfrequency/compute_tf_monolith.py', 'inputs/input.txt']
-
-Output of executed command: b'live  -  2\nmostly  -  2\nwhite  -  1\ntigers  -  1\nindia  -  1\nwild  -  1\nlions  -  1\nafrica  -  1\n'
-
-Decoded output of executed command:
-live  -  2
-mostly  -  2
-white  -  1
-tigers  -  1
-india  -  1
-wild  -  1
-lions  -  1
-africa  -  1
-
-Checking each line of the output ...
-...Finished checking each line of the output!
-
-The termfrequency/compute_tf_monolith.py is working correctly!
-```
 
 ## Automated Checks with GatorGrader
 
