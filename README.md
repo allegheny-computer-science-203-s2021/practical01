@@ -17,8 +17,7 @@
 * [System Requirements](#system-requirements)
 * [Reporting Problems](#reporting-problems)
 * [Receiving Assistance](#receiving-assistance)
-* [Project Assessment](#project-assessment)
-* [Project Feedback](#project-feedback)
+* [Practical Assessment](#project-assessment)
 
 ## Introduction
 
@@ -29,13 +28,9 @@ course class that uses the Python programming language. The GitHub Actions CI bu
 this repository will fail, as evidenced by a red
 &#x2717; appearing in the commit logs.
 
-This assignment invites a programmer to implement, document, and automatically
-test a Python program called `termfrequency/compute_tf_monolith.py`. Please
-refer to the Preface and Chapters 1 through 3 in "Exercises in Programming
-Style" to learn more about this program's input, output, and behavior. You can
-also review Chapters 1 through 2 in "Think Python" to learn more about how to
-program in Python and run Python scripts. In addition to fixing the bugs in
-this program and fully documenting it, you must extend, describe, and fully
+This assignment invites a developer to implement, document, and automatically
+test a Python program called `termfrequency/compute_tf_monolith.py`.  
+In addition to fixing the bugs in this program and fully documenting it, you must extend, describe, and fully
 implement automated testing strategy in the
 `checks/check_compute_tf_monolith.py` file.
 
@@ -67,10 +62,8 @@ guides will help you to understand how to use both [GitHub](http://github.com) a
 
 To do well on this assignment, you should also read Chapters 1 and 2 in "Think
 Python", paying particularly close attention to the content about variables,
-expressions, and statements. You should also read the Preface and Chapters 1
-through 3 in the "Exercises in Programming Style" book. Please see the course
-instructor or one of the teaching assistants or tutors if you have questions
-about any of these reading assignments.
+expressions, and statements. You should also review a [monolith program](https://github.com/crista/exercises-in-programming-style/blob/master/04-monolith/tf-04.py) accompanying 
+the "Exercises in Programming Style" book. 
 
 ## Tasks
 
@@ -82,7 +75,9 @@ As you are starting this assignment, you first need to complete these tasks to e
 - Install the Pyenv tool and use it to install a recent version of Python.
 - Install the Pipenv tool and later use it to install a Python application's dependencies.
 
-Now, study the provided Python source code and the technical documentation to understand the type of output that your program should produce.  At the outset, you should notice that the provided source code does not contain all of the source code from Chapter 3 of the book.  You will need to add in the appropriate source code and documentation to ensure that the Python program passes all of the checks and produces the correct output.  As you complete this assignment, please make sure that you understand and document all aspects of the provided Python programs! Once you have installed Docker Desktop, you can use the following "docker run" command to start "gradle grade" as a containerized application, using the "DockaGator" Docker image available on DockerHub.
+Now, study the provided Python source code and the technical documentation to understand the type of output that your program should produce.  
+The program counts the occurrences of words (term frequencies) in a file. The sample input is the book "Pride and Prejudice" taken from the Gutenberg Collection. The program reads input words from a file, removes all non-alphanumeric characters, normalizes (down-cases) the words, removes stop words (“the”, “a”, “for” etc), counts the occurrences of all words, and finally prints out the 25 most common words in order.
+At the outset, you should notice that the provided source code does not contain all of the source code from  the "Exercises in Programming Style" [book's program](https://github.com/crista/exercises-in-programming-style/blob/master/04-monolith/tf-04.py).  You will need to add in the appropriate source code and documentation to ensure that the Python program passes all of the checks and produces the correct output.  As you complete this assignment, please make sure that you understand and document all aspects of the provided Python programs! 
 
 ## System Commands
 
@@ -315,7 +310,7 @@ command `echo $?`).
 
 ```
         ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-        ┃ Passed 25/25 (100%) of checks for cmpsc-203-spring-2020-practical1! ┃
+        ┃ Passed 25/25 (100%) of checks for cmpsc-203-spring-2021-practical1! ┃
         ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
@@ -349,9 +344,7 @@ manually resolve them with the help of the instructor or a teaching assistant.
 This assignment uses [GitHub Actions CI](https://github.com/features/actions) to automatically run
 the checking programs every time you commit to your GitHub repository. The
 checking will start as soon as you have accepted the assignment, thus creating
-your own private repository, and the course instructor enables Travis for it. If
-you are using Travis for the first time, you will need to authorize Travis CI to
-access the private repositories that you created on GitHub.
+your own private repository. 
 
 ## Reporting Problems
 
@@ -377,11 +370,9 @@ session. Alternatively, you may ask questions in the Slack workspace for this
 course. Finally, you can schedule a meeting during the course instructor's
 office hours.
 
-## Project Assessment
+## Practical Assessment
 
-Taking inspiration from the principles of [specification-based
-grading](http://rtalbert.org/return-to-specs-grading-calculus/), the grade that
-a student receives on this assignment will have the following components:
+The grade that a student receives on this practical assignment is a checkmark grade (0 or 1) and is based on:
 
 - **Percentage of Correct GatorGrader Checks**: Students are encouraged to
   repeatedly try to implement a Java program that passes all of GatorGrader's
@@ -399,43 +390,8 @@ a student receives on this assignment will have the following components:
   their source code and technical writing in an attempt to get their GitHub Actions CI
   build to pass.
 
-- **Mastery of Technical Writing**: Students will also receive a checkmark grade
-  when the responses to the technical writing questions presented in the
-  `writing/reflection.md` reveal a mastery of both writing skills and technical
-  knowledge. To receive a checkmark grade, the submitted writing should have
-  correct spelling, grammar, and punctuation in addition to following the rules
-  of Markdown and providing technically accurate answers. Students are
-  encouraged to ask the course instructor or a student technical leader to use
-  the GitHub issue tracker to provide feedback on their mastery of technical
-  writing skills.
+Students will receive 1 if their solution passes all GatorGrader checks and receives a green  &#x2714;  in their last commit. 
 
-- **Mastery of Technical Knowledge and Skills**: Students will receive also
-  receive a checkmark grade when their GitHub repository reveals that they have
-  mastered all the technical knowledge and skills developed during the
-  completion of this project. As a part of this grade, the instructor will
-  assess aspects of the project including, but not limited to, the inclusion of
-  effective source code comments, creation of Git commit messages, correct use
-  of Docker, and correct installation and use of a full-fledge Python
-  development environment. Students are encouraged to ask the course instructor
-  or a student technical leader to use the GitHub issue tracker to provide
-  feedback on how well their work demonstrates mastery of the assignment's
-  technical knowledge and skills.
+All grades for this project will be reported through a student's GitHub gradebook
+repository.
 
-All grades for this project will be reported through a student's GitHub
-repository using either messages in the GitHub commit log or issues raised in
-the issue tracker. Students should ask questions about their grade for this
-project in GitHub so as to facilitate an effective conversation about the
-submitted deliverables.
-
-## Project Feedback
-
-Students who wish to receive feedback on their work for this practical
-assignment should first open an issue on the issue tracker for this GitHub
-repository, giving an appropriate title and description for the type of feedback
-that you would like the course instructor to provide. After creating this issue,
-you will see that GitHub has created a unique web site that references this
-issue. To alert the course instructor to the fact that the issue was created and
-that you want feedback on your work, please send it to him by a Slack direct
-message at least 24 hours in advance of the project's due date. After the
-instructor responds to the issue, please resolve all of the stated concerns and
-participate in the discussion until the issue is closed.

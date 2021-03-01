@@ -1,5 +1,5 @@
 ---
-name: cmpsc-203-spring-2020-practical1
+name: cmpsc-203-spring-2021-practical1
 break: true
 indent: 4
 ---
@@ -41,9 +41,6 @@ writing/reflection.md:
 
 # --> check the number of commits beyond a threshold
 CountCommits --count 10
-
-# NOTE: These checks do not run correctly in Travis CI because it
-# ultimately involves too many nested invocations of pipenv
 
 # NOTE: These checks do run correctly on a local laptop
 
