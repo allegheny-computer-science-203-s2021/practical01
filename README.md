@@ -1,5 +1,7 @@
 # cs203s2021-practical1
 
+## DUE: by midnight of the start of your practical (Tuesday or Thursday)
+
 ## Table of Contents
 
 * [Introduction](#introduction)
@@ -205,22 +207,22 @@ your submission must pass the following checks that
 [GatorGrader](https://github.com/GatorEducator/gatorgrader) automatically
 assesses:
 
-- The compute_tf_monolith.py in termfrequency has at least 10 of the `word_freqs` fragment
-- The compute_tf_monolith.py in termfrequency has at least 12 single-line Python comment(s)
-- The compute_tf_monolith.py in termfrequency has at least 1 multiple-line Python comment(s)
-- The compute_tf_monolith.py in termfrequency has at least 1 of the `for c in line` fragment
-- The compute_tf_monolith.py in termfrequency has at least 1 of the `for line in open` fragment
-- The compute_tf_monolith.py in termfrequency has at least 1 of the `for tf in word_freqs` fragment
-- The compute_tf_monolith.py in termfrequency has at least 2 of the `open(` fragment
-- The compute_tf_monolith.py in termfrequency has exactly 0 of the `TODO` fragment
-- The compute_tf_monolith.py in termfrequency has exactly 1 of the `print(` fragment
-- The file compute_tf_monolith.py exists in the termfrequency directory
-- The file reflection.md exists in the writing directory
-- The reflection.md in writing has at least 500 word(s) in total
-- The reflection.md in writing has exactly 0 of the `Add Your Name Here` fragment
-- The reflection.md in writing has exactly 1 of the `code_block` tag
-- The reflection.md in writing has exactly 8 of the `heading` tag
-- The repository has at least 5 commit(s)
+✔  The compute_tf_monolith.py in termfrequency has exactly 1 of the 'print(' fragment
+✔  The reflection.md in writing has exactly 0 of the 'Add Your Name Here' fragment
+✔  The reflection.md in writing has at least 2 of the 'code_block' tag
+✔  The compute_tf_monolith.py in termfrequency has at least 2 of the 'open(' fragment
+✔  The compute_tf_monolith.py in termfrequency has at least 1 of the 'for line in open' fragment
+✔  The compute_tf_monolith.py in termfrequency has at least 1 multiple-line Python comment(s)
+✔  The reflection.md in writing has at least 300 word(s) in total
+✔  The repository has at least 5 commit(s)
+✔  The reflection.md in writing has exactly 7 of the 'heading' tag
+✔  The compute_tf_monolith.py in termfrequency has at least 1 of the 'for tf in word_freqs' fragment
+✔  The compute_tf_monolith.py in termfrequency has at least 10 of the 'word_freqs' fragment
+✔  The file compute_tf_monolith.py exists in the termfrequency directory
+✔  The compute_tf_monolith.py in termfrequency has exactly 0 of the 'TODO' fragment
+✔  The file reflection.md exists in the writing directory
+✔  The compute_tf_monolith.py in termfrequency has at least 12 single-line Python comment(s)
+✔  The compute_tf_monolith.py in termfrequency has at least 1 of the 'for c in line' fragment
 
 If [GatorGrader's](https://github.com/GatorEducator/gatorgrader) automated
 checks pass correctly, the tool will produce the output like the following in
@@ -228,8 +230,8 @@ addition to returning a zero exit code (which you can access by typing the
 command `echo $?`).
 
 ```
-        ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-        ┃ Passed 15/15 (100%) of checks for cmpsc-203-spring-2021-practical1! ┃
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+        ┃ Passed 16/16 (100%) of checks for cmpsc-203-spring-2021-practical1! ┃
         ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
