@@ -15,7 +15,6 @@
 * [Automated Checks with GatorGrader](#automated-checks-with-gatorgrader)
 * [Updates](#updates)
 * [GitHub Actions](#github-actions)
-* [System Requirements](#system-requirements)
 * [Reporting Problems](#reporting-problems)
 * [Receiving Assistance](#receiving-assistance)
 * [Practical Assessment](#practical-assessment)
@@ -251,7 +250,7 @@ your repository. Now, you are ready to download the updates provided by the
 course instructor by typing:
 
 ```
-git pull download master
+git pull download main
 ```
 
 This second command can be run whenever the course instructor needs to provide
